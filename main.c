@@ -29,6 +29,24 @@ int main()
 	int b;
 
 	printf("Compare functions ft_ with standart lib\n");
+
+	printf("isdigit:\n");
+	char c[] = {'H', 'e', 'l', 'l', 'o', '\0'};
+	char d[] = {'H', 'e', 'l', 'l', 'o', '\0'};
+	printf("%s\n", (char *)memset(c, '-', 3)) ;
+	printf("%s\n", (char *)ft_memset(d, '-', 3));
+	
+	printf("bzero:\n");
+	bzero(c, 2);
+	ft_bzero(d, 2);
+	printf("%s\n", c);
+	printf("%s\n", d);
+	printf("%s\n", c+2);
+	printf("%s\n", d+2);
+
+
+
+
 	printf("isdigit:\n");
 	a = 'o';
 	printf("%d\t%d\t%d\n", isdigit(a), ft_isdigit(a), compare_int(isdigit(a), ft_isdigit(a)));
