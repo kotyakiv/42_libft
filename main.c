@@ -67,8 +67,31 @@ int main()
 	char c2[] = "";
 	printf("%ld\t%ld\t%d\n", strlen(c2), ft_strlen(c2), compare_size_t(strlen(c2), ft_strlen(c2)));
 
+	printf("isalnum:\n");
+	a = 'A';
+	printf("%d\t%d\t%d\n", isalnum(a), ft_isalnum(a), compare_int(isalnum(a), ft_isalnum(a)));
+	a = '1';
+	printf("%d\t%d\t%d\n", isalnum(a), ft_isalnum(a), compare_int(isalnum(a), ft_isalnum(a)));
+	a = '-';
+	printf("%d\t%d\t%d\n", isalnum(a), ft_isalnum(a), compare_int(isalnum(a), ft_isalnum(a)));
+	a = '\n';
+	printf("%d\t%d\t%d\n", isalnum(a), ft_isalnum(a), compare_int(isalnum(a), ft_isalnum(a)));
 
+	printf("isalpha:\n");
+	a = 'A';
+	printf("%d\t%d\t%d\n", isalpha(a), ft_isalpha(a), compare_int(isalpha(a), ft_isalpha(a)));
+	a = '+';
+	printf("%d\t%d\t%d\n", isalpha(a), ft_isalpha(a), compare_int(isalpha(a), ft_isalpha(a)));
+	a = '1';
+	printf("%d\t%d\t%d\n", isalpha(a), ft_isalpha(a), compare_int(isalpha(a), ft_isalpha(a)));
 
+	printf("isascii:\n");
+	a = 'A';
+	printf("%d\t%d\t%d\n", isascii(a), ft_isascii(a), compare_int(isascii(a), ft_isascii(a)));
+	a = '+';
+	printf("%d\t%d\t%d\n", isascii(a), ft_isascii(a), compare_int(isascii(a), ft_isascii(a)));
+	a = 130;
+	printf("%d\t%d\t%d\n", isascii(a), ft_isascii(a), compare_int(isascii(a), ft_isascii(a)));
 
 	return (0);
 }
