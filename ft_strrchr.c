@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/31 13:44:32 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 15:04:50 by ykot             ###   ########.fr       */
+/*   Created: 2021/10/31 12:11:52 by ykot              #+#    #+#             */
+/*   Updated: 2021/10/31 12:20:34 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strncpy(char *dest, const char *src, size_t n)
+char *ft_strrchr(const char *s, int c)
 {
-	size_t i;
+	size_t	i;
+	size_t	last;
 
 	i = 0;
-	while (i < n && src[i])
+	last = 0;
+	while (s[i])
 	{
-		dest[i] = src[i];
-		i++;
+		if (s[i] == c)
+			last = i;
+		++i;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return ((char *)s + last);
 }

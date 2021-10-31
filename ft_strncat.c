@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 13:40:13 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/30 19:02:16 by ykot             ###   ########.fr       */
+/*   Updated: 2021/10/31 15:05:28 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int len;
+	size_t len;
 	size_t i;
 
 	len = 0;
 	i = 0;
-	while (dest[len] != '\0')
+	while (dest[len])
 		len++;
-	while (i < n && src[i] != '\0')
+	while (i < n && src[i])
 	{
 		dest[len + i] = src[i];
 		i++;

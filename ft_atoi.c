@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/31 13:44:32 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 15:04:50 by ykot             ###   ########.fr       */
+/*   Created: 2021/10/30 17:58:58 by ykot              #+#    #+#             */
+/*   Updated: 2021/10/31 15:08:30 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strncpy(char *dest, const char *src, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t i;
+	int total;
+	int minus;
+	size_t	i;
 
+	minus = 1;
+	total = 0;
 	i = 0;
-	while (i < n && src[i])
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
+		|| nptr[i] == '\r' || nptr[i] == '\f' || nptr[i] == '\v')
+		++i;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		dest[i] = src[i];
-		i++;
+		if (nptr[i] == '-')
+			minus = -1;
+		++i;
 	}
-	while (i < n)
+	while (nptr[i]>= '0' && nptr[i] <= '9')
 	{
-		dest[i] = '\0';
-		i++;
+		total *= 10;
+		total += nptr[i] - '0';
+		++i;
 	}
-	return (dest);
+	return (total * minus);
 }

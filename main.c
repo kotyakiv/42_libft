@@ -44,7 +44,31 @@ int main()
 	printf("%s\n", c+2);
 	printf("%s\n", d+2);
 
+	printf("strstr\n");
+	printf("%s\n", strstr("Is there an needli and my needle one", "needle"));
+	printf("%s\n", ft_strstr("Is there an needli and my needle one", "needle"));
+	printf("%s\n", strstr("Is there an needli and my needle one", ""));
+	printf("%s\n", ft_strstr("Is there an needli and my needle one", ""));
+	//printf("%s\n", strstr("12", "my"));
+	printf("%s\n", ft_strstr("12", "my"));
 
+	printf("strnstr\n");
+	//printf("%s\n", strnstr("Is there an needli and my needle one", "needle", 33));
+	printf("%s\n", ft_strnstr("Is there an needli and my needle one", "needle", 33));
+	//printf("%s\n", strnstr("Is there an needli and my needle one", "needle", 15));
+	printf("%s\n", ft_strnstr("Is there an needli and my needle one", "needle", 15));
+
+	printf("strchr\n");
+	printf("%s\n", strchr("Is there an needli and my needle one", 'a'));
+	printf("%s\n", ft_strchr("Is there an needli and my needle one", 'a'));
+	//printf("%s\n", strchr("Is there an needli and my needle one", 'w'));
+	printf("%s\n", ft_strchr("Is there an needli and my needle one", 'w'));
+
+	printf("strrchr\n");
+	printf("%s\n", strrchr("Is there an needli and my needle one", 'a'));
+	printf("%s\n", ft_strrchr("Is there an needli and my needle one", 'a'));
+	//printf("%s\n", strrchr("Is there an needli and my needle one", 'w'));
+	printf("%s\n", ft_strrchr("Is there an needli and my needle one", 'w'));
 
 
 	printf("isdigit:\n");
@@ -111,5 +135,16 @@ int main()
 	a = 130;
 	printf("%d\t%d\t%d\n", isascii(a), ft_isascii(a), compare_int(isascii(a), ft_isascii(a)));
 
+
+
+	ft_putstr("putstr\n");
+	ft_putendl("putendl");
+	ft_putendl("putnbr:");
+	ft_putnbr(-2147483648);
+	printf("\n");
+	ft_putnbr(100);
+	printf("\n");
+	ft_putnbr(9);
+	printf("\n");
 	return (0);
 }

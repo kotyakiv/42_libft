@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 13:24:46 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/30 18:32:48 by ykot             ###   ########.fr       */
+/*   Updated: 2021/10/31 15:07:11 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	j = 0;
-	while (dest[i] != '\0')
+	while (dest[i])
 		i++;
-	while (src[j] != '\0')
+	while (src[j])
 		dest[i++] = src[j++];
 	dest[i] = '\0';
 	return (dest);

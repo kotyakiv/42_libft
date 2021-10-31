@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/31 13:44:32 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 15:04:50 by ykot             ###   ########.fr       */
+/*   Created: 2021/10/30 22:25:46 by ykot              #+#    #+#             */
+/*   Updated: 2021/10/31 15:33:44 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strncpy(char *dest, const char *src, size_t n)
+void ft_putnbr(int n)
 {
-	size_t i;
+	char c;
 
-	i = 0;
-	while (i < n && src[i])
+	if (n == -2147483648)
 	{
-		dest[i] = src[i];
-		i++;
+		write(1, "-2147483648", 11);
+		return ;
 	}
-	while (i < n)
+	if (n < 0)
 	{
-		dest[i] = '\0';
-		i++;
+		write(1, "-", 1);
+		n *= -1;
 	}
-	return (dest);
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	c = n % 10 + '0';
+	write(1, &c, 1);
 }
