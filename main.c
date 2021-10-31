@@ -70,6 +70,8 @@ int main()
 	//printf("%s\n", strrchr("Is there an needli and my needle one", 'w'));
 	printf("%s\n", ft_strrchr("Is there an needli and my needle one", 'w'));
 
+	printf("ft_strtrim\n");
+	printf("%s!\n", ft_strtrim(" 	Baba yagoda		123  	"));
 
 	printf("isdigit:\n");
 	a = 'o';
