@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 20:57:46 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 13:12:22 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 15:51:26 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		++i;
 	}
 	return (dest);

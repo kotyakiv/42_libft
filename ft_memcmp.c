@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 18:27:09 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 13:12:08 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 15:51:21 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n && (((char *)s1)[i] || ((char *)s2)[i]))
+	while (i < n && (((unsigned char *)s1)[i] || ((unsigned char *)s2)[i]))
 	{
-		if (((char *)s1)[i] != ((char *)s2)[i])
-			return (((char *)s1)[i] - ((char *)s2)[i]);
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 		++i;
 	}
 	return (0);

@@ -30,6 +30,24 @@ int main()
 
 	printf("Compare functions ft_ with standart lib\n");
 
+	printf("memmove:\n");
+	char memstr1[10];
+	strcpy(memstr1, "123456789");
+	printf("%s\n", memmove(memstr1, memstr1 + 2, 7));
+
+	char memstr4[10];
+	strcpy(memstr4, "123456789");
+	printf("%s\n", ft_memmove(memstr4, memstr4 + 2, 7));
+
+	printf("memcpy:\n");
+	char memstr2[10];
+	strcpy(memstr2, "123456789");
+	printf("%s\n", memcpy(memstr2 + 2, memstr2, 7));
+
+	char memstr3[10];
+	strcpy(memstr3, "123456789");
+	printf("%s\n", ft_memcpy(memstr3 + 2, memstr3, 7));
+
 	printf("isdigit:\n");
 	char c[] = {'H', 'e', 'l', 'l', 'o', '\0'};
 	char d[] = {'H', 'e', 'l', 'l', 'o', '\0'};
@@ -134,7 +152,7 @@ int main()
 	printf("%d\t%d\t%d\n", isascii(a), ft_isascii(a), compare_int(isascii(a), ft_isascii(a)));
 	a = '+';
 	printf("%d\t%d\t%d\n", isascii(a), ft_isascii(a), compare_int(isascii(a), ft_isascii(a)));
-	a = 130;
+	a = '1';
 	printf("%d\t%d\t%d\n", isascii(a), ft_isascii(a), compare_int(isascii(a), ft_isascii(a)));
 
 

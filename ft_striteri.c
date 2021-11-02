@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:50:38 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 13:19:45 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 14:38:19 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 
 	i = 0;
-	while (s[i])
+	while (&s[i])
 	{
-		f(i, s[i]);
+		f(i, &s[i]);
 		++i;
 	}
 }

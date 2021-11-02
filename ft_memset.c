@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 18:48:01 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 13:27:23 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 15:49:54 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		((char *)s)[i] = c;
+		((unsigned char *)s)[i] = c;
 		++i;
 	}
 	return (s);
