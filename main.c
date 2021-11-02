@@ -30,6 +30,12 @@ int main()
 
 	printf("Compare functions ft_ with standart lib\n");
 
+	printf("itoa");
+	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(-500));
+	printf("%s\n", ft_itoa(48849));
+	printf("%s\n", ft_itoa(2147483647));
+	
 	printf("memmove:\n");
 	char memstr1[10];
 	strcpy(memstr1, "123456789");
