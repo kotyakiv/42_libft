@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 20:10:34 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 18:34:27 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 22:08:03 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-/*
+
 typedef struct	s_list
 {
 	void	*content;
 	size_t	content_size;
 	struct s_list	*next;
 }		t_list;
-*/
+
 void	*ft_memset(void *s, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -66,10 +66,8 @@ int 	ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
-char	**ft_strsplit(char const *s, char c); //not finished
+char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
-static size_t	ft_sup_count_len(int *minus, int n);
-static void		ft_sup_itoa(char **str, int minus, int n, int len);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
@@ -81,13 +79,13 @@ void	ft_putnbr_fd(int n, int fd);
 
 
 //bonus part
-/*
+
 t_list *ft_lstnew(void const *content, size_t content_size); //not finished
 void ft_lstdelone(t_list **alst, void (*del)(void*, size_t)); //not finished
 void ft_lstdel(t_list **alst, void (*del)(void *, size_t)); //not finished
 void ft_lstadd(t_list **alst, t_list *new); //not finished
 void ft_lstiter(t_list *lst, void (*f)(t_list *elem)); //not finished
 t_list * ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem)); //not finished
-*/
+
 
 #endif

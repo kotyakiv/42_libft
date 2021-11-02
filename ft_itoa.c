@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:35:31 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 18:35:23 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 22:06:44 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_sup_itoa(char **str, int minus, int n, int len)
+static void	ft_sup_itoa(char **str, int minus, int n, int len)
 {
 	if (minus)
 	{
@@ -33,7 +33,7 @@ void	ft_sup_itoa(char **str, int minus, int n, int len)
 	}
 }
 
-size_t	ft_sup_count_len(int *minus, int n)
+static size_t	ft_sup_count_len(int *minus, int n)
 {
 	int	len;
 
