@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 19:09:30 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 19:10:50 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:19:22 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strequ(char const *s1, char const *s2)
+int	ft_strequ(char const *s1, char const *s2)
 {
 	size_t	i;
 

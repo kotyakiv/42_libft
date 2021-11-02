@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:40:55 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/01 11:49:39 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:19:31 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
 	size_t	i;
 

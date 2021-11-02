@@ -6,17 +6,17 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 18:49:37 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 18:56:31 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:22:50 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strnew(size_t size)
+char	*ft_strnew(size_t size)
 {
-	char *strnew;
+	char	*strnew;
 	size_t	i;
-	
+
 	strnew = (char *)malloc(sizeof(char) * size);
 	if (!strnew)
 		return (NULL);

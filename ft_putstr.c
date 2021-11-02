@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 22:16:53 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/30 22:21:47 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:16:26 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
 	size_t	i;
 

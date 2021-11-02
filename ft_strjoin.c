@@ -6,18 +6,18 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 19:53:29 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 19:59:23 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:20:16 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*joinstr;
-	size_t 	i;
+	size_t	i;
 	size_t	j;
-	
+
 	joinstr = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!joinstr)
 		return (NULL);

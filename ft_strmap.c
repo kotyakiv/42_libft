@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:53:02 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/01 11:57:48 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:20:54 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*newstr;
 	size_t	i;

@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 21:09:23 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/30 22:19:12 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:29:14 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*void *ft_memmove(void *dest, const void *src, size_t n) ///not finished
+/*void *ft_memmove(void *dst, const void *src, size_t len) ///not finished
 {
 	size_t	i;
 	

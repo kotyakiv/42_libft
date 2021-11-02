@@ -6,15 +6,15 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 19:28:11 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 19:50:38 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:23:54 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *newstr;
+	char	*newstr;
 	size_t	i;
 	size_t	j;
 

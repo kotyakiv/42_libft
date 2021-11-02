@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 19:04:25 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 19:05:55 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:17:06 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
 	size_t	i;
 

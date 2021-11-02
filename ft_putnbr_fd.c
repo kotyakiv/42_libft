@@ -6,15 +6,15 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 15:32:34 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 15:34:14 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:15:36 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char c;
+	char	c;
 
 	if (n == -2147483648)
 	{

@@ -6,19 +6,19 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:04:59 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 22:54:51 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:24:19 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	char	*bufstr;
 	char	*newstr;
 	size_t	i;
 	size_t	j;
-	
+
 	bufstr = ft_strnew(strlen(s) + 1);
 	if (!bufstr)
 		return (NULL);

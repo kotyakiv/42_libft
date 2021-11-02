@@ -6,14 +6,16 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 18:58:26 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 18:59:36 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:18:42 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
+	if (!*as)
+		return ;
 	free(*as);
 	*as = NULL;
 }

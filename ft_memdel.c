@@ -6,14 +6,16 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 18:47:38 by ykot              #+#    #+#             */
-/*   Updated: 2021/10/31 18:48:34 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/02 13:13:06 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
+	if (!*ap)
+		return ;
 	free(*ap);
 	*ap = NULL;
 }
