@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 20:10:34 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 22:08:03 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/03 13:04:05 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct	s_list
 	void	*content;
 	size_t	content_size;
 	struct s_list	*next;
-}		t_list;
+}				t_list;
 
 void	*ft_memset(void *s, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -77,15 +77,12 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-
-//bonus part
-
-t_list *ft_lstnew(void const *content, size_t content_size); //not finished
-void ft_lstdelone(t_list **alst, void (*del)(void*, size_t)); //not finished
-void ft_lstdel(t_list **alst, void (*del)(void *, size_t)); //not finished
-void ft_lstadd(t_list **alst, t_list *new); //not finished
-void ft_lstiter(t_list *lst, void (*f)(t_list *elem)); //not finished
-t_list * ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem)); //not finished
-
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void	ft_lstappend(t_list **begin_list, t_list *lstnew);
 
 #endif
