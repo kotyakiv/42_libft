@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 19:11:55 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 13:22:20 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/03 19:53:35 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n && (s1[i] || s2[i]))
+	while (i < n)
 	{
 		if (s1[i] != s2[i])
 			return (0);
+		++i;
 	}
 	return (1);
 }

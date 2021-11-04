@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:30:06 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 22:03:48 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/04 11:43:29 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ static int		ft_nb_str(char const *str, char c)
 	n = 0;
 	i = 0;
 	flag = 1;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		if (str[i] != c)
+		if (str[i] != c && flag)
 		{
 			flag = 0;
 			n++;
 		}
-		if (str[i] == c && flag)
+		if (str[i] == c && !flag)
 		{
 			flag = 1;
 		}
@@ -73,7 +73,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	cnt = 0;
 	nb = ft_nb_str(s, c);
-	lines = (char**)malloc(sizeof(char*) * (nb + 1));
+	lines = (char**)malloc(sizeof(char*) * (nb));
 	i = 0;
 	while (i < nb)
 	{

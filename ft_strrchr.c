@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 12:11:52 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 13:23:17 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/03 18:39:40 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,21 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-	size_t	last;
-
+	int	i;
+	int	last;
+	
 	i = 0;
-	last = 0;
+	last = -1;
 	while (s[i])
 	{
 		if (s[i] == c)
 			last = i;
 		++i;
 	}
-	return ((char *)s + last);
+	if (s[i] == c)
+		last = i;
+	if (last != -1)
+		return ((char *)s + last);
+	else
+		return (NULL);
 }
