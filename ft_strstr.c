@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/31 17:39:07 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/03 22:34:00 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/04 22:24:16 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 				if (!needle[j])
 					return ((char *)haystack + fp);
 			}
-			--i;
+			i = fp;
 		}
 		++i;
 	}

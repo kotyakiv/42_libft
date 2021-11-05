@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 20:10:34 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/04 11:42:59 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/04 22:40:42 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int 	ft_strequ(char const *s1, char const *s2);
 int 	ft_strnequ(char const *s1, char const *s2, size_t n);
-char	*ft_strsub(char const *s, unsigned int start, size_t len); //name changed
+char	*ft_substr(char const *s, unsigned int start, size_t len); //name changed
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s); //compil error
-char	**ft_strsplit(char const *s, char c);
+char	*ft_strtrim(char const *s);
+char	**ft_split(char const *s, char c); //name changed
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);

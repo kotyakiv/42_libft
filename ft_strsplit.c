@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:30:06 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/04 11:43:29 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/04 22:36:19 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ static char	*ft_strcut(char const *src, int *cnt, char c)
 		(*cnt)++;
 	}
 	str = (char*)malloc(sizeof(char) * (l + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (i < *cnt - j)
 	{
@@ -64,7 +66,7 @@ static char	*ft_strcut(char const *src, int *cnt, char c)
 	return (str);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	int		cnt;
 	int		nb;
@@ -74,6 +76,8 @@ char	**ft_strsplit(char const *s, char c)
 	cnt = 0;
 	nb = ft_nb_str(s, c);
 	lines = (char**)malloc(sizeof(char*) * (nb));
+	if (!lines)
+		return (NULL);
 	i = 0;
 	while (i < nb)
 	{

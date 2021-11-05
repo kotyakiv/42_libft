@@ -6,7 +6,7 @@
 #    By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 23:20:01 by ykot              #+#    #+#              #
-#    Updated: 2021/11/04 11:59:59 by ykot             ###   ########.fr        #
+#    Updated: 2021/11/04 12:11:27 by ykot             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,9 @@ $(NAME):
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-
-
+so:
+	gcc -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 clean:
 	rm -f $(OBJ)
