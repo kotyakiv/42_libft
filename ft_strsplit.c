@@ -6,17 +6,17 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:30:06 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/04 22:36:19 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/05 16:37:10 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_nb_str(char const *str, char c)
+static int	ft_nb_str(char const *str, char c)
 {
-	int i;
-	int n;
-	int flag;
+	int	i;
+	int	n;
+	int	flag;
 
 	n = 0;
 	i = 0;
@@ -53,7 +53,7 @@ static char	*ft_strcut(char const *src, int *cnt, char c)
 		l++;
 		(*cnt)++;
 	}
-	str = (char*)malloc(sizeof(char) * (l + 1));
+	str = (char *)malloc(sizeof(char) * (l + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -73,9 +73,11 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	char	**lines;
 
+	if (!s)
+		return (NULL);
 	cnt = 0;
 	nb = ft_nb_str(s, c);
-	lines = (char**)malloc(sizeof(char*) * (nb));
+	lines = (char **)malloc(sizeof(char *) * (nb));
 	if (!lines)
 		return (NULL);
 	i = 0;

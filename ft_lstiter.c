@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/03 12:34:27 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/05 13:49:20 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	t_list	*next;
 	t_list	*temp;

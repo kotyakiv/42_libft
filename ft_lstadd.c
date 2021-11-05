@@ -6,15 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 23:20:10 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/04 11:43:56 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/05 13:48:14 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
-void ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
 	if (!*alst || !new)
 		return ;

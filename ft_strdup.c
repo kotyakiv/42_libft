@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 22:09:33 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/04 22:01:25 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/05 16:06:25 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,9 @@
 char	*ft_strdup(const char *s)
 {
 	size_t		i;
-	size_t		length;
 	char		*str;
 
-	if (!s)
-		return (NULL);
-	length = ft_strlen(s);
-	str = (char *)malloc(sizeof(char *) * (length + 1));
+	str = ft_strnew(ft_strlen(s));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -30,6 +26,5 @@ char	*ft_strdup(const char *s)
 		str[i] = s[i];
 		++i;
 	}
-	str[i] = '\0';
 	return (str);
 }

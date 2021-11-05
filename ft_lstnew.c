@@ -6,20 +6,19 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 23:20:45 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/02 23:20:48 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/05 13:48:54 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void const *content, size_t content_size)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	t_list *lstnew;
+	t_list	*lstnew;
 
 	lstnew = (t_list *)malloc(sizeof(t_list));
 	if (!lstnew)
 		return (NULL);
-
 	if (!content)
 	{
 		lstnew->content = NULL;
