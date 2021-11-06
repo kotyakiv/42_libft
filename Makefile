@@ -6,7 +6,7 @@
 #    By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 23:20:01 by ykot              #+#    #+#              #
-#    Updated: 2021/11/04 12:11:27 by ykot             ###   ########.fr        #
+#    Updated: 2021/11/06 22:29:43 by ykot             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_isdigit.c ft_memchr.c ft_putnbr.c ft_strdup.c ft_strncmp.c ft_tolower.c \
 ft_isprint.c ft_memcmp.c ft_putnbr_fd.c ft_strequ.c ft_strncpy.c ft_toupper.c \
 ft_itoa.c ft_memcpy.c ft_putstr.c ft_striter.c ft_strnequ.c ft_lstadd.c \
 ft_memdel.c ft_putstr_fd.c ft_striteri.c ft_strnew.c ft_lstdel.c ft_memmove.c \
-ft_strcat.c ft_strjoin.c ft_strnstr.c
+ft_strcat.c ft_strjoin.c ft_strnstr.c ft_lstmap.c
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a
@@ -32,9 +32,9 @@ $(NAME):
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-so:
-	gcc -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+#so:
+#	gcc -nostartfiles -fPIC $(CFLAGS) $(SRC)
+#	gcc -nostartfiles -shared -o libft.so $(OBJ)
 
 clean:
 	rm -f $(OBJ)
