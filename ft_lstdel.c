@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 23:20:15 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/06 22:14:46 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/07 22:53:39 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	t_list *next;
 
 	temp = (*alst);
-	while (temp != NULL)
+	while (!temp)
 	{
 		next = temp->next;
-		del(temp->content, temp->content_size);
-		free(temp);
+		ft_lstdelone(&temp, del);
 		temp = next;
 	}
 	*alst = NULL;
