@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 20:10:34 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/06 22:19:31 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/07 23:43:27 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-//t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void	ft_lstappend(t_list **begin_list, t_list *lstnew);
 
 #endif
