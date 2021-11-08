@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:58:58 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/06 14:12:15 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 13:06:42 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_whitespaces (char c)
+static int	ft_whitespaces(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n'
 		|| c == '\r' || c == '\f' || c == '\v')
@@ -31,13 +31,13 @@ static int	ft_atoi_sign(const char *str, size_t i, int *minus)
 	return (0);
 }
 
-static int	ft_max_long_border(const char *str, size_t i, int minus, size_t iter)
+static int	ft_max_long_border(const char *s, size_t i, int m, size_t iter)
 {
-	if (iter == 17 && (str[i] != '0'
-		|| (minus == 1 && str[i] == '0' && (str[i + 1] == '8' || str[i + 1] == '9'))
-		|| (minus == -1 && str[i] == '0' && (str[i + 1] == '9' ))))
+	if (iter == 17 && (s[i] != '0'
+			|| (m == 1 && s[i] == '0' && (s[i + 1] == '8' || s[i + 1] == '9'))
+			|| (m == -1 && s[i] == '0' && (s[i + 1] == '9'))))
 	{
-		if (minus == 1)
+		if (m == 1)
 			return (1);
 		else
 			return (-1);
@@ -65,7 +65,7 @@ int	ft_atoi(const char *str)
 		if (ft_max_long_border(str, i, minus, iter) == 1)
 			return (-1);
 		if (ft_max_long_border(str, i, minus, iter) == -1)
-			return (0);	
+			return (0);
 		total *= 10;
 		total += str[i] - '0';
 		++i;

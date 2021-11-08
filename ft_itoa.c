@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:35:31 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/04 22:04:01 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 15:44:33 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_sup_itoa(char **str, int minus, int n, int len)
+static void	ft_itoa_put_in_str(char **str, int minus, int n, int len)
 {
 	if (minus)
 	{
@@ -33,7 +33,7 @@ static void	ft_sup_itoa(char **str, int minus, int n, int len)
 	}
 }
 
-static size_t	ft_sup_count_len(int *minus, int n)
+static size_t	ft_itoa_count_len(int *minus, int n)
 {
 	int	len;
 
@@ -71,12 +71,12 @@ char	*ft_itoa(int n)
 		newstr = ft_strdup("0");
 		return (newstr);
 	}
-	len = ft_sup_count_len(&minus, n);
+	len = ft_itoa_count_len(&minus, n);
 	newstr = ft_strnew(len + 1);
 	if (!newstr)
 		return (NULL);
 	if (minus)
 		n *= -1;
-	ft_sup_itoa(&newstr, minus, n, len);
+	ft_itoa_put_in_str(&newstr, minus, n, len);
 	return (newstr);
 }

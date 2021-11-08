@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 19:09:30 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/05 16:35:44 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 15:19:42 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,7 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	size_t	i;
-
 	if (!s1 || !s2)
 		return (0);
-	i = 0;
-	while (s1[i] || s2[i])
-	{
-		if (s1[i] != s2[i])
-			return (0);
-		++i;
-	}
-	return (1);
+	return (!ft_strcmp(s1, s2));
 }

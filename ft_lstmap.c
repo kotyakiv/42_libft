@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:04:40 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/07 23:10:01 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 13:03:57 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*new_list;
 	t_list	*new;
 	t_list	*temp;
-	
+
 	if (!lst)
 		return (NULL);
 	new_list = NULL;

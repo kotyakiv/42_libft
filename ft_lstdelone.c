@@ -6,13 +6,13 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 23:20:20 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/08 00:11:29 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 13:03:47 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
 	if (!*alst)
 		return ;

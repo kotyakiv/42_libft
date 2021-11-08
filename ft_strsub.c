@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 19:28:11 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/06 22:13:13 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 13:05:45 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 	{
 		newstr = ft_strnew(0);
-		return (newstr);	
+		return (newstr);
 	}
 	newstr = ft_strnew(len);
 	if (!newstr)

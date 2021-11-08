@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 22:21:25 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/05 16:34:04 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 15:32:34 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 
 void	ft_putendl(char const *s)
 {
-	size_t	i;
-
 	if (!s)
 		return ;
-	i = 0;
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		++i;
-	}
-	write(1, "\n", 1);
+	ft_putstr(s);
+	ft_putchar('\n');
 }

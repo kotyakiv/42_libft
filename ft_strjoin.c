@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 19:53:29 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/05 16:38:02 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 15:22:21 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	joinstr = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1);
+	joinstr = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
 	if (!joinstr)
 		return (NULL);
 	i = 0;
