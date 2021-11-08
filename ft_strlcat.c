@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 12:25:27 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/08 14:28:48 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/08 17:27:18 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_len = ft_strlen(dst);
 	if (dst_len >= dstsize)
 		return (dstsize + src_len);
-	i = 0;
+	i = dst_len;
 	j = 0;
-	while (dst[i] && i < dstsize - 1)
-		++i;
 	while (src[j] && i < dstsize - 1)
 		dst[i++] = src[j++];
 	while (i < dstsize)

@@ -6,7 +6,7 @@
 #    By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 23:20:01 by ykot              #+#    #+#              #
-#    Updated: 2021/11/06 22:29:43 by ykot             ###   ########.fr        #
+#    Updated: 2021/11/08 18:10:47 by ykot             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,16 +25,11 @@ OBJ = $(SRC:.c=.o)
 NAME = libft.a
 CFLAGS = -c -Wall -Werror -Wextra
 
-all: $(NAME)
-
 $(NAME):
 	gcc $(CFLAGS) $(SRC)
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-
-#so:
-#	gcc -nostartfiles -fPIC $(CFLAGS) $(SRC)
-#	gcc -nostartfiles -shared -o libft.so $(OBJ)
+	
+all: $(NAME)
 
 clean:
 	rm -f $(OBJ)
