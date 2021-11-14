@@ -6,7 +6,7 @@
 #    By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 23:20:01 by ykot              #+#    #+#              #
-#    Updated: 2021/11/14 20:50:01 by ykot             ###   ########.fr        #
+#    Updated: 2021/11/15 01:05:36 by ykot             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ ft_isprint.c ft_memcmp.c ft_putnbr_fd.c ft_strequ.c ft_strncpy.c ft_toupper.c \
 ft_itoa.c ft_memcpy.c ft_putstr.c ft_striter.c ft_strnequ.c ft_lstadd.c \
 ft_memdel.c ft_putstr_fd.c ft_striteri.c ft_strnew.c ft_lstdel.c ft_memmove.c \
 ft_strcat.c ft_strjoin.c ft_strnstr.c ft_lstmap.c ft_lstappend.c ft_lstelem.c \
-ft_lstsize.c ft_lstdelelem.c
+ft_lstsize.c ft_lstdelelem.c ft_lstaddelem.c
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a

@@ -60,7 +60,9 @@ int main()
 		new = new->next;
 	}
 
-	ft_lstdelelem(&a, 3, del);
+	//ft_lstdelelem(&a, 3, del);
+	new = ft_lstnew("New", sizeof("New"));
+	ft_lstaddelem(&a, new, 2);
 	printf("Print list A elements again\n");
 	new = a;
 	for (size_t i = 0; i < ft_lstsize(a); i++)

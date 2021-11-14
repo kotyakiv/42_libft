@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 20:10:34 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/14 20:49:52 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/15 01:18:30 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ void	ft_lstappend(t_list **begin_list, t_list *lstnew);
 t_list	*ft_lstelem(t_list **begin_list, size_t	elem);
 size_t	ft_lstsize(t_list *begin_list);
 void	ft_lstdelelem(t_list **lst, size_t elem, void (*del)(void *, size_t));
+void	ft_lstaddelem(t_list **alst, t_list *new, size_t pos);
 
 #endif

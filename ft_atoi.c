@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 17:58:58 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/08 13:06:42 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/15 01:24:50 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ static int	ft_atoi_sign(const char *str, size_t i, int *minus)
 
 static int	ft_max_long_border(const char *s, size_t i, int m, size_t iter)
 {
-	if (iter == 17 && (s[i] != '0'
+	if (iter > 18 || (iter == 17 && (s[i] != '0'
 			|| (m == 1 && s[i] == '0' && (s[i + 1] == '8' || s[i + 1] == '9'))
-			|| (m == -1 && s[i] == '0' && (s[i + 1] == '9'))))
+			|| (m == -1 && s[i] == '0' && (s[i + 1] == '9')))))
 	{
 		if (m == 1)
 			return (1);
