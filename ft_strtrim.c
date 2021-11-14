@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:04:59 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/08 17:14:48 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/14 19:34:33 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char	*ft_strtrim(char const *s)
 {
 	char	*bufstr;
 	char	*newstr;
-	size_t	i;
 	size_t	s_len;
 	size_t	bufstr_len;
 
@@ -46,12 +45,7 @@ char	*ft_strtrim(char const *s)
 	newstr = ft_strnew(bufstr_len);
 	if (!newstr)
 		return (NULL);
-	i = 0;
-	while (bufstr[i])
-	{
-		newstr[i] = bufstr[i];
-		i++;
-	}
+	ft_strcpy(newstr, bufstr);
 	ft_strdel(&bufstr);
 	return (newstr);
 }

@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 11:45:18 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/08 14:41:21 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/14 19:30:56 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	fp;
 
 	i = 0;
-	if (*needle == '\0')
+	if (!*needle)
 		return ((char *)haystack);
 	while (haystack[i] && i < len)
 	{

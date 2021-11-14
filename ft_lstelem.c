@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstelem.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 22:09:33 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/14 18:27:14 by ykot             ###   ########.fr       */
+/*   Created: 2021/11/14 19:59:01 by ykot              #+#    #+#             */
+/*   Updated: 2021/11/14 20:12:52 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+t_list	*ft_lstelem(t_list **begin_list, size_t	elem)
 {
-	char	*str;
+	t_list	*temp;
 
-	str = ft_strnew(ft_strlen(s1));
-	if (!str)
+	if (!*begin_list || !elem)
 		return (NULL);
-	ft_strcpy(str, s1);
-	return (str);
+	temp = *begin_list;
+	while(temp && --elem)
+		temp = temp->next;
+	if (!elem)
+		return (temp);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 20:10:34 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/08 17:57:32 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/14 20:49:52 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
-char	**ft_strsplit(char const *s, char c);
+char	**ft_split(char const *s, char c); //rename !!
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
@@ -81,5 +81,9 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void	ft_lstappend(t_list **begin_list, t_list *lstnew);
+t_list	*ft_lstelem(t_list **begin_list, size_t	elem);
+size_t	ft_lstsize(t_list *begin_list);
+void	ft_lstdelelem(t_list **lst, size_t elem, void (*del)(void *, size_t));
 
 #endif

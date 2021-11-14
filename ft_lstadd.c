@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 23:20:10 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/05 13:48:14 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/14 20:19:35 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (!*alst || !new)
+	if (!new)
 		return ;
 	new->next = *alst;
 	*alst = new;
