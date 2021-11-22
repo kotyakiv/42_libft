@@ -6,7 +6,7 @@
 #    By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 23:20:01 by ykot              #+#    #+#              #
-#    Updated: 2021/11/15 01:05:36 by ykot             ###   ########.fr        #
+#    Updated: 2021/11/23 00:14:58 by ykot             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,16 +26,16 @@ OBJ = $(SRC:.c=.o)
 NAME = libft.a
 CFLAGS = -c -Wall -Werror -Wextra
 
-$(NAME):
-	gcc $(CFLAGS) $(SRC)
-	ar rc $(NAME) $(OBJ)
-	
 all: $(NAME)
 
+$(NAME):
+	@gcc $(CFLAGS) $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
