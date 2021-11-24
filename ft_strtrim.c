@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/31 20:04:59 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/22 22:56:39 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/23 15:26:23 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s)
 	size_t	ns;
 	size_t	nl;
 	size_t	s_len;
-	
+
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);

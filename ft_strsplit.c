@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:30:06 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/08 17:31:07 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/23 15:48:25 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,16 @@ static char	*ft_strcut(char const *src, int *cnt, char c)
 	int		j;
 	char	*str;
 
-	while (src[*cnt] == c)
+	while (src[*cnt] && src[*cnt] == c)
 		(*cnt)++;
 	j = *cnt;
 	l = 0;
-	while (src[*cnt] != c)
+	while (src[*cnt] && src[*cnt] != c)
 	{
 		l++;
 		(*cnt)++;
 	}
-	str = (char *)malloc(sizeof(char) * (l + 1));
+	str = ft_strnew(l);
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -77,15 +77,12 @@ char	**ft_strsplit(char const *s, char c)
 		return (NULL);
 	cnt = 0;
 	nb = ft_nb_str(s, c);
-	lines = (char **)malloc(sizeof(char *) * (nb));
+	lines = (char **)malloc(sizeof(char *) * (nb + 1));
 	if (!lines)
 		return (NULL);
 	i = 0;
 	while (i < nb)
-	{
-		lines[i] = ft_strcut(s, &cnt, c);
-		i++;
-	}
+		lines[i++] = ft_strcut(s, &cnt, c);
 	lines[i] = 0;
 	return (lines);
 }

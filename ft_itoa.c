@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:35:31 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/23 00:12:56 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/23 14:38:40 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,6 @@ char	*ft_itoa(int n)
 		return (NULL);
 	if (minus)
 		n *= -1;
-	ft_itoa_put_in_str(&newstr, minus, n, --len);
+	ft_itoa_put_in_str(&newstr, minus, n, len - 1);
 	return (newstr);
 }

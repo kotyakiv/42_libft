@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:38:46 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/14 19:41:27 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/23 14:37:12 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_lstsize(t_list *begin_list)
 	while (begin_list)
 	{
 		begin_list = begin_list->next;
-		++size;	
+		++size;
 	}
 	return (size);
 }

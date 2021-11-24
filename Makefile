@@ -6,12 +6,12 @@
 #    By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 23:20:01 by ykot              #+#    #+#              #
-#    Updated: 2021/11/23 00:14:58 by ykot             ###   ########.fr        #
+#    Updated: 2021/11/23 15:41:07 by ykot             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = ft_atoi.c ft_lstdelone.c ft_memset.c ft_strchr.c ft_strlcat.c ft_strrchr.c \
-ft_bzero.c ft_lstiter.c ft_putchar.c ft_strclr.c ft_strlen.c ft_split.c \
+ft_bzero.c ft_lstiter.c ft_putchar.c ft_strclr.c ft_strlen.c ft_strsplit.c \
 ft_isalnum.c ft_lstnew.c ft_putchar_fd.c ft_strcmp.c ft_strmap.c ft_strstr.c \
 ft_isalpha.c ft_memalloc.c ft_putendl.c ft_strcpy.c ft_strmapi.c ft_strsub.c \
 ft_isascii.c ft_memccpy.c ft_putendl_fd.c ft_strdel.c ft_strncat.c ft_strtrim.c \
@@ -31,7 +31,7 @@ all: $(NAME)
 $(NAME):
 	@gcc $(CFLAGS) $(SRC)
 	@ar rc $(NAME) $(OBJ)
-	
+
 clean:
 	@rm -f $(OBJ)
 

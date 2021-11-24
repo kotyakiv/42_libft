@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:59:01 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/14 20:12:52 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/23 14:30:53 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstelem(t_list **begin_list, size_t	elem)
 	if (!*begin_list || !elem)
 		return (NULL);
 	temp = *begin_list;
-	while(temp && --elem)
+	while (temp && --elem)
 		temp = temp->next;
 	if (!elem)
 		return (temp);
