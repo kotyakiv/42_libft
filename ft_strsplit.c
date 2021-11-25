@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:30:06 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/23 15:48:25 by ykot             ###   ########.fr       */
+/*   Updated: 2021/11/25 22:34:29 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	ft_nb_str(char const *str, char c)
 {
-	int	i;
-	int	n;
-	int	flag;
+	size_t	i;
+	size_t	n;
+	size_t	flag;
 
 	n = 0;
 	i = 0;
@@ -37,12 +37,12 @@ static int	ft_nb_str(char const *str, char c)
 	return (n);
 }
 
-static char	*ft_strcut(char const *src, int *cnt, char c)
+static char	*ft_strcut(char const *src, size_t *cnt, char c)
 {
-	int		i;
-	int		l;
-	int		j;
-	char	*str;
+	size_t		i;
+	size_t		l;
+	size_t		j;
+	char		*str;
 
 	while (src[*cnt] && src[*cnt] == c)
 		(*cnt)++;
@@ -66,11 +66,18 @@ static char	*ft_strcut(char const *src, int *cnt, char c)
 	return (str);
 }
 
+static void	ft_free_split(char ***lines, size_t i)
+{
+	while (i)
+		free((*lines)[i--]);
+	free(*lines);
+}
+
 char	**ft_strsplit(char const *s, char c)
 {
-	int		cnt;
-	int		nb;
-	int		i;
+	size_t		cnt;
+	size_t		nb;
+	size_t		i;
 	char	**lines;
 
 	if (!s)
@@ -82,7 +89,15 @@ char	**ft_strsplit(char const *s, char c)
 		return (NULL);
 	i = 0;
 	while (i < nb)
-		lines[i++] = ft_strcut(s, &cnt, c);
+	{
+		lines[i] = ft_strcut(s, &cnt, c);
+		if (!lines[i])
+		{
+			t_free_split(&lines, i);
+			return (NULL);
+		}
+		++i;
+	}
 	lines[i] = 0;
 	return (lines);
 }
