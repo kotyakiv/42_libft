@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 23:20:45 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/07 23:20:20 by ykot             ###   ########.fr       */
+/*   Updated: 2021/12/01 00:31:08 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		lstnew->content = (void *)malloc(content_size);
 		if (!lstnew->content)
+		{
+			free(lstnew);
 			return (NULL);
+		}
 		ft_memcpy(lstnew->content, content, content_size);
 		lstnew->content_size = content_size;
 		lstnew->next = NULL;
