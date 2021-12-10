@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 20:10:34 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/23 15:39:17 by ykot             ###   ########.fr       */
+/*   Updated: 2021/12/10 14:04:02 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# define BUFF_SIZE 1024
 
 typedef struct s_list
 {
@@ -86,5 +87,6 @@ t_list	*ft_lstelem(t_list **begin_list, size_t	elem);
 size_t	ft_lstsize(t_list *begin_list);
 void	ft_lstdelelem(t_list **lst, size_t elem, void (*del)(void *, size_t));
 void	ft_lstaddelem(t_list **alst, t_list *new, size_t pos);
+int		get_next_line(const int fd, char **line);
 
 #endif

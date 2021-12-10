@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:30:06 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/26 21:43:15 by ykot             ###   ########.fr       */
+/*   Updated: 2021/12/03 12:44:25 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	**ft_strsplit(char const *s, char c)
 	size_t		cnt;
 	size_t		nb;
 	size_t		i;
-	char	**lines;
+	char		**lines;
 
 	if (!s)
 		return (NULL);
