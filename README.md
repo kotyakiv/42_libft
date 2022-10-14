@@ -10,7 +10,7 @@ This is good practicing in coding and helps to understand how these functions wo
 - lists
 - double lists
 - hashmap
-
+- other
 
 # Hive projects
 Libft fully consist of such projects like libft, get_next_line, ft_printf and always 
