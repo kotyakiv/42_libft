@@ -13,4 +13,4 @@ This is good practicing in coding and helps to understand how these functions wo
 - other
 
 # Hive projects
-Libft fully consist of such projects like libft, get_next_line, ft_printf and always 
+Libft fully consist of such 42 projects like **libft**, **get_next_line**, **ft_printf** that I decided not to have separately and megred everything to this repository
