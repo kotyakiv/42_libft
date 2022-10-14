@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 19:42:05 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/23 14:30:02 by ykot             ###   ########.fr       */
+/*   Updated: 2022/08/04 21:18:42 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	ft_lstdelelem(t_list **lst, size_t elem, void (*del)(void *, size_t))
 	t_list	*begin_elem;
 	t_list	*next;
 
-	if (!*lst || !elem)
+	if (!lst || !*lst)
 		return ;
-	if (elem == 1)
+	if (!elem)
 	{
 		next = (*lst)->next;
 		ft_lstdelone(&(*lst), del);
@@ -41,7 +41,7 @@ void	ft_lstdelelem(t_list **lst, size_t elem, void (*del)(void *, size_t))
 	while ((*lst)->next)
 	{
 		--elem;
-		if (!(elem - 1))
+		if (!elem)
 		{
 			ft_lstdelelem_sub(&(*lst), del);
 			*lst = begin_elem;

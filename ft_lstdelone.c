@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 23:20:20 by ykot              #+#    #+#             */
-/*   Updated: 2021/11/08 13:03:47 by ykot             ###   ########.fr       */
+/*   Updated: 2022/07/03 13:23:02 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	if (!*alst)
+	if (!alst || !*alst)
 		return ;
 	del((*alst)->content, (*alst)->content_size);
 	free(*alst);

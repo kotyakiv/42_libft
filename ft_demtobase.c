@@ -1,30 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_demtobase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/31 18:49:37 by ykot              #+#    #+#             */
-/*   Updated: 2022/10/09 18:02:51 by ykot             ###   ########.fr       */
+/*   Created: 2022/02/15 15:45:19 by ykot              #+#    #+#             */
+/*   Updated: 2022/03/15 14:06:43 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+static char	ft_digit(unsigned long long num, int base)
 {
-	char	*strnew;
-	size_t	i;
+	char	digit;
 
-	strnew = (char *)malloc(sizeof(char) * (size + 1));
-	if (!strnew)
-		return (NULL);
+	if (num % base > 9)
+		digit = 'a' + num % base - 10;
+	else
+		digit = num % base + '0';
+	return (digit);
+}
+
+char	*ft_demtobase(unsigned long long num, int base)
+{
+	char	*total;
+	int		iter;
+	int		i;
+
+	iter = ft_numundig(num, base);
+	total = ft_strnew(iter);
 	i = 0;
-	while (i < size + 1)
+	while (i < iter)
 	{
-		strnew[i] = '\0';
+		total[i] = ft_digit(num, base);
+		num /= base;
 		++i;
 	}
-	return (strnew);
+	ft_strrev(total);
+	return (total);
 }

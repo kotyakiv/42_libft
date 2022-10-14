@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   sub_functions.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/02/15 15:47:22 by ykot              #+#    #+#             */
+/*   Updated: 2022/03/15 16:22:59 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	putllunbr(unsigned long long n)
 {
-	t_list	*next;
+	char	c;
 
-	if (!lst)
-		return ;
-	while (lst)
-	{
-		next = lst->next;
-		f(lst);
-		lst = next;
-	}
+	if (n >= 10)
+		putllunbr(n / 10);
+	c = n % 10 + '0';
+	ft_putchar(c);
+}
+
+long long	smaller(long long a, long long b)
+{
+	if (a < b && a >= 0)
+		return (a);
+	else
+		return (b);
 }

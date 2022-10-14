@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_dlstdel.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/08/27 00:06:25 by ykot              #+#    #+#             */
+/*   Updated: 2022/10/06 15:57:09 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_dblstdel(t_dynlist *alst, void (*del)(void *))
 {
-	t_list	*next;
+	t_dblist	*next;
+	t_dblist	*temp;
 
-	if (!lst)
+	if (alst->size == 0)
 		return ;
-	while (lst)
+	temp = alst->head;
+	while (temp)
 	{
-		next = lst->next;
-		f(lst);
-		lst = next;
+		next = temp->next;
+		ft_dblstdelone(&temp, del);
+		temp = next;
 	}
+	alst = NULL;
 }

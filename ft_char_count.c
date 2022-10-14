@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_char_count.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: bkandemi <bkandemi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/10/06 17:00:53 by bkandemi          #+#    #+#             */
+/*   Updated: 2022/10/06 17:01:03 by bkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int	ft_char_count(char *line, char c)
 {
-	t_list	*next;
+	int	i;
+	int	count;
 
-	if (!lst)
-		return ;
-	while (lst)
+	i = 0;
+	count = 0;
+	while (line[i] != '\0')
 	{
-		next = lst->next;
-		f(lst);
-		lst = next;
+		if (line[i] == c)
+			count++;
+		i++;
 	}
+	return (count);
 }

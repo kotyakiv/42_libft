@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_putllnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/03/15 12:24:38 by ykot              #+#    #+#             */
+/*   Updated: 2022/03/15 12:24:47 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_putllnbr(long long n)
 {
-	t_list	*next;
+	char	c;
 
-	if (!lst)
-		return ;
-	while (lst)
+	if (n == -9223372036854775807 - 1)
 	{
-		next = lst->next;
-		f(lst);
-		lst = next;
+		ft_putstr("9223372036854775808");
+		return ;
 	}
+	if (n < 0)
+		n *= -1;
+	if (n >= 10)
+		ft_putllnbr(n / 10);
+	c = n % 10 + '0';
+	ft_putchar(c);
 }

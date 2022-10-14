@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_hash_set.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/10/14 12:29:03 by ykot              #+#    #+#             */
+/*   Updated: 2022/10/14 12:36:01 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int	ft_hash_set(t_list **hashmap, char *str, void *ptr)
 {
-	t_list	*next;
+	t_list			*new;
+	t_hash			*value;
+	unsigned long	key;
 
-	if (!lst)
-		return ;
-	while (lst)
+	value = (t_hash *)ft_memalloc(sizeof(t_hash));
+	if (value == NULL)
+		return (0);
+	value->name = str;
+	value->ptr = ptr;
+	key = ft_hash_key(str, HASH);
+	new = ft_lstnewptr((void *)value);
+	if (!new)
 	{
-		next = lst->next;
-		f(lst);
-		lst = next;
+		free(value);
+		return (0);
 	}
+	ft_lstappend(&hashmap[key], new);
+	return (1);
 }

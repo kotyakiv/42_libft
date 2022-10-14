@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_dynlstappend.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: bkandemi <bkandemi@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/08/26 23:29:19 by ykot              #+#    #+#             */
+/*   Updated: 2022/09/20 12:53:28 by bkandemi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_dynlstappend(t_dynlist *alst, t_dblist *new)
 {
-	t_list	*next;
-
-	if (!lst)
+	if (!new)
 		return ;
-	while (lst)
+	if (alst->size == 0)
 	{
-		next = lst->next;
-		f(lst);
-		lst = next;
+		alst->head = new;
+		alst->tail = new;
+		alst->size = 1;
+	}
+	else
+	{
+		alst->tail->next = new;
+		new->prev = alst->tail;
+		alst->tail = new;
+		alst->size++;
 	}
 }

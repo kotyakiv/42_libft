@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_hash_key.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/10/14 12:28:24 by ykot              #+#    #+#             */
+/*   Updated: 2022/10/14 12:28:47 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+unsigned long	ft_hash_key(const char *s, unsigned long m)
 {
-	t_list	*next;
+	unsigned long		key;
+	unsigned const char	*us;
 
-	if (!lst)
-		return ;
-	while (lst)
+	us = (unsigned const char *) s;
+	key = 0;
+	while (*us != '\0')
 	{
-		next = lst->next;
-		f(lst);
-		lst = next;
+		key = (key * 256 + *us) % m;
+		us++;
 	}
+	return (key);
 }

@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_hash_free.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/10/14 12:25:01 by ykot              #+#    #+#             */
+/*   Updated: 2022/10/14 12:26:38 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_free_hash(t_list **hashmap, void (*del)(void *, size_t))
 {
-	t_list	*next;
+	size_t	i;
 
-	if (!lst)
-		return ;
-	while (lst)
+	i = 0;
+	while (i < HASH)
 	{
-		next = lst->next;
-		f(lst);
-		lst = next;
+		if (hashmap[i])
+		{
+			ft_lstdel(&hashmap[i], del);
+		}
+		i++;
 	}
+	free(hashmap);
 }

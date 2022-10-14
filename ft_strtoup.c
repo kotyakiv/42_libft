@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_strtoup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 23:20:25 by ykot              #+#    #+#             */
-/*   Updated: 2022/07/03 13:16:18 by ykot             ###   ########.fr       */
+/*   Created: 2022/03/15 13:04:33 by ykot              #+#    #+#             */
+/*   Updated: 2022/03/17 11:17:17 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_strtoup(char *str)
 {
-	t_list	*next;
+	size_t	i;
 
-	if (!lst)
-		return ;
-	while (lst)
+	i = 0;
+	while (str[i])
 	{
-		next = lst->next;
-		f(lst);
-		lst = next;
+		if (str[i] >= 'a' && str[i] <= 'f')
+			str[i] = ft_toupper(str[i]);
+		++i;
 	}
 }
