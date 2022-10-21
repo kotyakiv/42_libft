@@ -1,9 +1,9 @@
 # libft
-This is my library that was done during studying in Hive Helsinki and still 
-is being updating. In Hive we are not able to use standart functions and libraries 
-except very few ones: **write**, **read**, **open**, **close**, **free**, **malloc**, **exit** and functions in
+This is my library that was done while studying at Hive Helsinki and is still 
+being updated. In Hive we are not able to use standard functions and libraries, 
+except a very few: **write**, **read**, **open**, **close**, **free**, **malloc**, **exit** and functions in
 <stdarg.h>
-This is good practicing in coding and helps to understand how these functions work from the inside
+This is good practice in coding and helps to understand how these functions work from the inside
 ## Content
 - string manipulations 
 - memory manipulations
@@ -18,4 +18,4 @@ Libft fully consist of such 42 projects like
 - get_next_line   
 - ft_printf 
   
-that I decided not to have separately and megred everything to this repository
+that I decided not to have separately and merged everything to this repository
