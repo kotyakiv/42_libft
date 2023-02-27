@@ -6,7 +6,7 @@
 #    By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 23:20:01 by ykot              #+#    #+#              #
-#    Updated: 2022/10/14 12:35:01 by ykot             ###   ########.fr        #
+#    Updated: 2023/02/27 14:41:47 by ykot             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,7 +97,8 @@ SRC = 		ft_atoi.c \
 			ft_hash_get.c \
 			ft_hash_isin.c \
 			ft_hash_key.c \
-			ft_hash_set.c
+			ft_hash_set.c \
+			ft_ischarinstr.c \
 
 SRC_PF = 	ft_printf.c \
 			print_conversion.c \

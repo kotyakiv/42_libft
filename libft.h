@@ -6,7 +6,7 @@
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 20:10:34 by ykot              #+#    #+#             */
-/*   Updated: 2022/10/14 12:33:43 by ykot             ###   ########.fr       */
+/*   Updated: 2023/02/27 13:15:22 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ char			**ft_strsplit(char const *s, char c);
 void			ft_strtoup(char *str);
 void			ft_strrev(char *str);
 int				ft_char_count(char *line, char c);
+int				ft_ischarinstr(char c, const char *str);
 
 /*
 **	Memory

@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnewptr.c                                     :+:      :+:    :+:   */
+/*   ft_ischarinstr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykot <ykot@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 22:49:34 by bkandemi          #+#    #+#             */
-/*   Updated: 2023/02/27 13:10:48 by ykot             ###   ########.fr       */
+/*   Created: 2022/11/18 16:45:59 by ykot              #+#    #+#             */
+/*   Updated: 2023/02/27 13:14:41 by ykot             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnewptr(void *content)
+int	ft_ischarinstr(char c, const char *str)
 {
-	t_list	*lstnew;
+	int	i;
+	int	found;
 
-	lstnew = (t_list *)ft_memalloc(sizeof(t_list));
-	if (!lstnew)
-		return (NULL);
-	if (!content)
+	found = FALSE;
+	i = 0;
+	while (str[i] != '\0')
 	{
-		lstnew->content = NULL;
-		lstnew->content_size = 0;
-		lstnew->next = NULL;
+		if (c == str[i])
+		{
+			found = TRUE;
+			break ;
+		}
+		i++;
 	}
-	else
-	{
-		lstnew->content = content;
-		lstnew->content_size = 0;
-		lstnew->next = NULL;
-	}
-	return (lstnew);
+	return (found);
 }
